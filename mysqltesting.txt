@@ -1,0 +1,16 @@
+in mysql create an EOI table for when a user submits the form
+CREATE TABLE eoi (
+	EOInumber
+	reference
+	given_name
+	family_name
+	street
+	sub_town
+	state
+	postcode
+	email //need too add to the form
+	phone
+	skill //can just have a number of generic fields (skill 1, skill 2 etc)
+	others
+	status //new, current final
+};

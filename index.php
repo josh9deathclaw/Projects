@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" >
+  <meta name="description" content="Assignment 1" >
+  <meta name="keywords" content="Main Page" >
+  <meta name="author" content="Joshua Lillington-Moore"  >
+  <title>Night City Creations</title>
+  <!-- References to external font 'Blade Runne Style Font' -->
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' >
+  <!-- References to external font 'Fallout 3 Computer Style Font' -->
+  <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' >
+  <!-- References to external font 'Cyberpunk 2077 Font -->
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet' >
+  <!-- References to external basic CSS file -->
+  <link href= "styles/style.css" rel="stylesheet" >
+  <script src="scripts/enhancements2.js"></script>
+</head>
+
+<body class="index_body">
+	<?php
+		include 'header.inc';
+		include 'menu.inc';
+	?>
+
+<section id="company_description">
+	<p>Welcome to Night City Creations, a cutting-edge AA game studio, specializing in immersive and dystopian-themed experiences. We merge captivating narratives, stunning visuals and innovative gameplay to achieve our goal of transporting players into our digital worlds.</p>
+</section> 
+<!-- new slideshow for games -->
+<section class="slideshow-container">
+	<div class="mySlides fade"> <!-- add a div for the fade effect when going accross the slide -->
+		<div class="numbertext">1 / 3</div>
+		<img src="images/spacetimeloop.jpeg" alt="Game 1" class="game-image">
+		<div class="text">Temporal Paradox : A captivating and mind-bending space exploration game. You awaken trapped on a unknown space vessel, travelling into the vast galaxy, you are heading towards the unknown and must figure out how to escape before time runs out.</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext">2 / 3</div>
+		<img src="images/dystopianruins.jpeg" alt="Game 2" class="game-image">
+		<div class="text">Aeon Inferno : Intense, gripping, survival fantasy, you are stuck in a world consumed by unending flames. In the aftermath of a cataclysmic event you must do everything you can to survive a relentless world. Aeon Inferno is an survival exploration game, featuring item management, deadly enemies and an ever adapting world.</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext">3 / 3</div>
+		<img src="images/ghoststory.jpeg" alt="Game 3" class="game-image">
+		<div class="text">Ghosts of Progress : As Detective Eliiot Walls, you were born into a dystopian metropolis, you had thought you had seen it all, but a recent event has made things a lot more personal, it is your goal to unravel the mystery before it is too late. Ghosts of Progress is a noir and sci-fi thriller, you will be tasked with making life or death decisions where everything you do can change the outcome.</div>
+	</div>
+
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- the two buttons, onclick it refers to the function plusSlides and changes its position in the array  -->
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</section>
+<br>
+<div class="dots">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<!--<section class="game_section">
+	<div class="game_content">
+		<img src="images/spacetimeloop.jpeg" alt="Game 1">
+		<div class="game_description">
+			<h2>Temporal Paradox</h2>
+			<p>A captivating and mind-bending space exploration game. You awaken trapped on a unknown space vessel, travelling into the vast galaxy, you are heading towards the unknown and must figure out how to escape before time runs out.</p>
+		</div>
+	</div>
+</section>
+
+<section class="game_section">
+	<div class="game_content">
+		<img src="images/dystopianruins.jpeg" alt="Game 2">
+		<div class="game_description">
+			<h2>Aeon Inferno</h2>
+			<p>Intense, gripping, survival fantasy, you are stuck in a world consumed by unending flames. In the aftermath of a cataclysmic event you must do everything you can to survive a relentless world. Aeon Inferno is an survival exploration game, featuring item management, deadly enemies and an ever adapting world.</p>
+		</div>
+	</div>
+</section>
+
+<section class="game_section">
+	<div class="game_content">
+		<img src="images/ghoststory.jpeg" alt="Game 3">
+		<div class="game_description">
+			<h2>Ghosts of Progress</h2>
+			<p>As Detective Eliiot Walls, you were born into a dystopian metropolis, you had thought you had seen it all, but a recent event has made things a lot more personal, it is your goal to unravel the mystery before it is too late. Ghosts of Progress is a noir and sci-fi thriller, you will be tasked with making life or death decisions where everything you do can change the outcome.</p>
+		</div>
+	</div>
+</section> -->
+
+	<?php
+		include 'footer.inc';
+	?>
+</body>
+</html>
