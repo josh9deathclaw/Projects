@@ -1,0 +1,457 @@
+/*references :
+https://www.obsidian.net/careers/open-positions/programming/wUsm5pMzk3-graphics-programmer - graphics programmer description
+
+https://www.betterteam.com/net-developer-job-description  - .NET developer description
+
+https://www.w3schools.com/css/css_background_repeat.asp - background image
+
+https://www.w3schools.com/css/css_pseudo_elements.asp - for the pseudo elements, cyberpunk effect on the table
+
+https://blog.depositphotos.com/15-cyberpunk-color-palettes-for-dystopian-designs.html - inspiration for color palette
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ - help with flex in the css, better options for item positioning
+*/
+
+/*
+filename: joshua lillington
+author: joshua lillington
+purpose: create a style for the webpage for assignment 1, it needs to all be linked to this one css, having a general theme throughout
+theme: inspired by retro, cyberpunk
+created: 29/08/2023
+last modified: 29/08/2023
+description: assign1.html
+*/
+/*Styling for Index Page Body */
+.index_body{ 
+	background-image: url("images/blue.jpeg"); 
+	background-size: cover; /*scales the images to cover the entire container (whole body) */
+	background-repeat: repeat-x; /*Repeats the image horizontally */
+	background-attachment: fixed; /*Keeps the images fixed while scrolling*/
+}
+body{
+	font-family: 'Rajdhani', sans-serif;
+	background-color: #8386F5;
+}
+header{
+	background-color: black;
+	background-size: cover;
+	background-position: center;
+	padding: 20px 0; /*20px top and bottom and 0px right and left */
+	display: flex; /*allows control of layout, alignment, spacing*/
+	align-items: center; /*aligns flex items vertically (in the middle of the cross axis) */
+	justify-content: center; /*aligns flex item along main axis (horizontally) */  /*both used in order to centre exactly in the middle of the header*/
+}
+header h1{
+	font: 400 48px 'Orbitron', sans-serif;
+	color: #00FF00;
+	margin: 0 auto; /*centers horizontally*/
+	position: relative; /*sets its position relative to its parent (the header) */
+	transition: color 0.3s;  /*creates the hover effect, changes color in 0.3s */
+}
+/*hover effect on the headers main heading*/
+header h1:hover{
+	text-shadow: 0 0 10px #1AFE49, 0 0 20px #1AFE49, 0 0 30px #1AFE49; 
+	/*adjusts the text shadow to create a glow effect, has 3 layers of stronger shadow effect each time */
+}
+/*styling for navigation menu */
+.cyber_nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;  /*allows control of layout, alignment, spacing*/
+}
+.cyber_nav li{
+	flex: 1;
+}
+.cyber_nav{
+	background-color: #041348;
+	text-align: center;
+	font-family: 'Rajdhani', sans-serif;
+}
+.cyber_nav a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	padding: 8px;
+	transition: background-color 0.3s; /*another smooth background color transition*/
+}
+/*hover effect for navigation links */
+.cyber_nav a:hover{
+	background-color: #3D34B4;
+}
+/*when clicked changes color again*/
+.cyber_nav a:active{
+	background-color:#1AFE49;
+}
+
+#company_description{
+	text-align: center;
+	padding: 40px 0;
+}
+#company_description p{
+	font-family: 'Share Tech Mono', sans-serif;
+	max-width: 600px;
+	margin: 0 auto;
+	font-size: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	text-shadow: 0 0 10px #1AFE49;
+	background-color: #083E12;
+	color: #00FF00;
+}
+.game_section{
+	display:flex;
+	margin-bottom:20px;
+}
+.game_content {
+	display: flex;
+	align-items: center;
+}
+.game_content img{
+	max-width: 40%;
+	margin-right: 20px;
+	border: 1px solid #000;
+}
+.game_description{
+	flex: 1; /*equally share available space in the section (flex container) */
+}
+.game_description h2{
+	font-size: 18px;
+	margin-top: 0;
+	font-family: 'Orbitron', sans-serif;
+}
+.game_description p{
+	margin-bottom: 0;
+}
+
+main{
+	padding: 20px;
+}
+.job_listing{
+	display: flex;
+	flex-direction: column; /*changes direction of main axis of the job listing to vertical, stacked on top of each other*/
+	margin-bottom: 40px;
+	border: 2px solid #041348;
+	padding: 20px;
+	margin: 40px;
+	border-radius: 10px;
+}
+.basic_info{
+	display: flex;
+	align-items: flex-start; /*aligns the basic info to the start of the axis (left)*/
+	justify-content: space-between; /*distributes space evenly*/
+	margin-bottom: 20px;
+}
+.job_description{
+	width: 75%
+}
+.job_description h2{
+	font-size:30px;
+	font-family: 'Orbitron', sans-serif;
+}
+/*for the job salary and who they refer too, it is styled as an old terminal, bring a lot of attention*/
+aside {
+	float: right;
+	width: 25%;
+	background-color: #083E12;
+	padding: 10px;
+	box-sizing: border-box;
+	font-family: 'Share Tech Mono', sans-serif;
+	color: #00FF00;
+	text-shadow: 0 0 10px #1AFE49;
+	border-radius: 10px;
+}
+.resp_qual{
+	display: flex;
+}
+.responsibilities {
+	width: 50%;
+	padding-right: 20px;
+}
+.qualification{
+	width: 50%;
+}
+.qualification th, .qualification td{
+	padding: 8px;
+	text-align: left;
+	border: 1px solid #083E12;
+}
+.qualification table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+/*styling for the form, intended to make it like an old pc interface (inspired heavily from fallout terminals*/
+form {
+	background-color: #083E12;
+	padding: 10px 80px 10px 20px;
+	margin-right: 20px;
+	box-sizing: border-box; /*calcs the forms entire size*/
+	font-family: 'Share Tech Mono', sans-serif;
+	color: #00FF00;
+	text-shadow: 0 0 10px #1AFE49;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+.entire_form{
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+.error{
+		color: red;
+		text-shadow: 0 0 10px red;
+		font-weight: bold;
+		margin-bottom: 10px;
+}
+.form_title{
+	font-size: 40px;
+}
+.form_container{
+	display: flex;
+	justify-content: flex-end; 
+	align-items: center;
+	padding: 20px 20px 20px 40px;
+	margin-right: 20px;
+}
+input[type="text"], input[type="date"], input[type="checkbox"], select, textarea{
+	font-family: 'Share Tech Mono', sans-serif;
+	color: #00FF00;
+	text-shadow: 0 0 10px #1AFE49;
+	background-color: #083E12;
+	border-color: #083E12
+}
+.about_me dl{
+	flex-wrap: wrap; /*will wrap the text multiple lines*/
+	display: flex;
+}
+.about_me dt {
+	flex: 0 0 120px; /*shorthand, wont grow to fill available space, not shrink either, width of 120px initially*/
+	font-weight: bold;
+	margin-right: 10px;
+}
+.about_me dd{
+	flex: 1;
+	margin-left: 0;
+}
+.image_figure{
+	float: right;
+	width: 20%;
+	border: 1px solid #000;
+	clear: right; /*clears any floated elements positioned to its right */
+	transition: border-color 0.3s;
+}
+.image_figure:hover{
+	border-color: #FF6CFF;
+}
+.image_figure img{
+	max-width: 100%;
+}
+.image_figure figcaption{
+	text-align: center;
+}
+
+.contact_list{
+	display: flex;
+	flex-wrap: wrap;
+}
+.contact_list dt{
+	flex: 0 0 120px;
+	font-weight: bold;
+	clear: left;
+}
+.contact_list dd{
+	flex: 1;
+	margin-left: 20px;
+}
+
+.timetable {
+	border-collapse: collapse;
+	padding: 20px;
+	overflow: hidden; /*clips content that is larger than space available (wont affect other elements) */
+	border-radius: 5px;
+}
+.timetable table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.timetable th{
+	font-weight: bold;
+	text-align: left;
+	background-color: #007BFF;
+	color: #fff;
+	position: relative;
+}
+/* */
+.timetable th::before {
+	content:""; /*makes it empty*/
+	position: absolute; /*positions it absolutely relative to th*/
+	top: 0; 
+	left: 0; 
+	height: 100%; /*the line covers its entire height*/
+	width: 3px;
+	background-color: #00FFFF; 
+	transform-origin: top left; /*the line will come from the top-left corner */
+	transform: scaleY(0); /*rescales the vertical line to be zero in height, making it seem invisible*/
+	transition: transform 0.3s ease-in-out; /*in 0.3s it will smoothly transition*/
+}
+/*hover effect, shows where the users mouse is over*/
+.timetable th:hover::before {
+	transform: scaleY(1);/*scales it to a height of 1, revealing the vertical line*/
+}
+/*same code but just for the td section, different color used*/
+.timetable td{
+	background-color: #F0F0F0;
+	padding: 5px 10px;
+	position: relative;
+}
+.timetable td::before {
+	content:"";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 3px;
+	background-color: #F887FF;
+	transform-origin: top left;
+	transform: scaleY(0);
+	transition: transform 0.3s ease-in-out;
+}
+.timetable td:hover::before {
+	transform: scaleY(1);
+}
+/*styles the photo grid */
+.photo_grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*columns adjust to available space, autofill creates as many columns as possible, with a min of 200px, the 1fr distributes the rest of the spacde among the columns */
+	gap: 20px; /*controls space between the images */
+	margin:20px;
+}
+.photo_item{
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	height: 0;
+	padding-bottom: 100%
+}
+.photo_item img{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /*makes the images fit into the sections, wont stretch them*/
+}
+
+/*for enhancement 1, slideshow*/
+* {box-sizing:border-box}
+
+/*slideshow container*/
+.slideshow-container{
+	max-width: 900px;
+	position: relative;
+	margin: auto;
+}
+
+/*hide images by default*/
+.mySlides{
+	display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease; /* prevents text selection when clicking the buttons */
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  background-color: rgba(4, 19, 72, 0.7); /* Adjust the alpha value (0.7) for transparency */
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.game-image{
+   width:100%
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+	text-align:center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade; /* applies the 'fade' keyframes animation */
+  animation-duration: 1.5s;
+}
+/*keyframe animation for fading the slides in */
+@keyframes fade {
+  from {opacity: .4} /*changes the opacity of the image so it appears to be fading */
+  to {opacity: 1}
+}
+
+/*really basic styling of footer, same color as the nav menu*/
+footer{
+	background-color: #041348;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+	position: relative;
+	margin-top: 20px;
+}
+footer p{
+	font-size: 14px;
+	margin: 0;
+}
