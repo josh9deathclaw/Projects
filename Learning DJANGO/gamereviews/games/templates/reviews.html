@@ -1,0 +1,36 @@
+<!-- games/templates/reviews.html -->
+{% extends 'base.html' %}
+{% load static %} 
+{% block content %}
+<div class="header-content">
+  <h1>Game Review Page</h1>
+</div>
+<div class="table-container">
+<table class="review-table">
+    <thead>
+      <tr>
+        <th>Game</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for review in reviews %}
+      <tr>
+        <td>{{ review.game }}</td>
+        <td>{{ review.avg_score }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="2">No reviews found.</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="{% url 'write' %}"><button>Create</button></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+<div>
+{% endblock %}

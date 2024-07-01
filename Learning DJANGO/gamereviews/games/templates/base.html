@@ -1,0 +1,36 @@
+<!-- games/templates/base.html -->
+<!-- create a base html, for the navigation and bottom part of the website-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-widght, intial-scale=1.0">
+        <title>{% block title %} Game Reviews{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'games/css/styles.css' %}">
+    </head>
+    <body>
+        <!-- Navigation Bar creation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'reviews' %}">Reviews</a></li>
+                <li><a href="{% url 'write' %}">Write</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content of Page will be fit here -->
+         <div class="content">
+            {% block content %}
+            <!-- content from child templates will appear here -->
+            {% endblock %}
+         </div>
+
+         <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Joshua Lillington-Moore</p>
+            </div>
+         </footer>
+    </body>
+</html>

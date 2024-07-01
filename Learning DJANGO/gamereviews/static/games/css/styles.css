@@ -1,0 +1,257 @@
+/* static/css/styles.css */
+
+.index_body{ 
+	background-image: url("images/blue.jpeg"); 
+	background-size: cover; /*scales the images to cover the entire container (whole body) */
+	background-repeat: repeat-x; /*Repeats the image horizontally */
+	background-attachment: fixed; /*Keeps the images fixed while scrolling*/
+}
+
+/* Center header content */
+.header-content {
+  text-align: center;
+  color: #404040; /* Example text color */
+  padding: 5px 0; /* Adjust padding as needed */
+}
+
+/* Style the header title */
+h1 {
+  font-family: 'Nunito', sans-serif; /* Example font family */
+  font-size: 2.0rem; /* Example font size */
+  font-weight: normal; /* Example font weight */
+}
+
+/* Basic styling for navigation bar */
+.navbar {
+    background-color: #fff;
+    color: #1a1a1a;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar li a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: 333;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #f2f2f2;
+}
+
+.navbar li a:hover {
+    background-color: #f2f2f2;
+}
+
+navbar li a:active {
+    color: #888;
+}
+
+/* Styling for footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.footer-content {
+    padding: 10px;
+}
+
+/* Styling for the Slideshow Image Container */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  margin-bottom: 20px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.game-image{
+    width:100%
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+	text-align:center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Styling for Table on Review Page */
+.table-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.3); /* Blue glow tint */
+}
+
+.review-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.review-table th, .review-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.review-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.review-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.review-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* styling for form in write.html */
+/* Center form content */
+.form-container {
+  width: 80%; /* Adjust width as needed */
+  margin: 0 auto; /* Center align */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Form input and textarea styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px; /* Space between labels and inputs */
+}
+
+input[type=text],
+input[type=number],
+textarea {
+  padding: 10px; /* Padding inside input fields */
+  margin-bottom: 16px; /* Space between inputs */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+textarea:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #333; /* Focus border color */
+}
+
+button[type=submit] {
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 12px 20px; /* Padding inside button */
+  border: none; /* Remove button border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+button[type=submit]:hover {
+  background-color: #555; /* Darker background on hover */
+}
